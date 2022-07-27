@@ -33,6 +33,7 @@ jobs:
       - name: Zip
         run: |
           zip -r app.zip mainTemplate.json createUiDefinition.json
+          pwd
           ls
       - uses: actions/upload-artifact@v3
         with:
