@@ -31,7 +31,9 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Zip
-        run: zip -r app.zip mainTemplate.json createUiDefinition.json
+        run: |
+          zip -r app.zip mainTemplate.json createUiDefinition.json
+          ls
       - uses: actions/upload-artifact@v3
         with:
           name: my-artifact
